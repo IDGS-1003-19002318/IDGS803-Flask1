@@ -1,0 +1,47 @@
+{% extends "layout.html" %} {% block titulo %}Cinepolis{% endblock %} {% block
+content %}
+
+<div class="row">
+  <div class="col">
+    <form
+      class="form-group form-horizontal border bg-secondary-subtle p-3"
+      method="post"
+      action="/cinepolis"
+    >
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" name="nombre" />
+      </div>
+      <div class="mb-3">
+        <label for="cantidadC" class="form-label">Cantidad Compradores</label>
+        <input
+          type="number"
+          name="cantidadC"
+          class="form-control"
+          id="cantidadC"
+        />
+      </div>
+      <div class="mb-3 form-check flex">
+        <div class="col-">
+          <input type="checkbox" class="form-check-input" name="tarjeta" />
+        </div>
+        <div class="col-">
+          <label class="form-check-label" for="tarjeta">Tarjeta Cineco</label>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="cantidadB" class="form-label">Cantidad de boletas</label>
+        <input
+          type="password"
+          name="cantidadb"
+          class="form-control"
+          id="cantidadB"
+        />
+      </div>
+      <br />
+      {% if boletos > 7 and compradores = 1 %} {% endif %}
+      <input type="submit" class="btn btn-primary" value="Procesar" />
+    </form>
+  </div>
+</div>
+{% endblock %}
