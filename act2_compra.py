@@ -1,8 +1,6 @@
-class Compra:
-    precio = 12
-    
-    def __init__(self,precio):
-        self.precio = precio
+class Compra():
+    def __init__(self):
+        self.precio = 12
         
     def compraB(self,boletos):
         return boletos * self.precio

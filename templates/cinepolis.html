@@ -6,7 +6,7 @@ content %}
     <form
       class="form-group form-horizontal border bg-secondary-subtle p-3"
       method="post"
-      action="/cinepolis"
+      action="/resultadoCompra"
     >
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre</label>
@@ -32,14 +32,13 @@ content %}
       <div class="mb-3">
         <label for="cantidadB" class="form-label">Cantidad de boletas</label>
         <input
-          type="password"
-          name="cantidadb"
+          type="number"
+          name="cantidadB"
           class="form-control"
           id="cantidadB"
         />
       </div>
       <br />
-      {% if boletos > 7 and compradores = 1 %} {% endif %}
       <input type="submit" class="btn btn-primary" value="Procesar" />
     </form>
   </div>
